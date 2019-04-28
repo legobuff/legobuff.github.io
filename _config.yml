@@ -1,3 +1,37 @@
-theme: jekyll-theme-minimal
 title: legobuff
-description: husband. father. geek.
+author: jamie wallingford 
+email: jamie@legobuff.com
+description: a place for me to post about life, projects, and findings.
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    github: legobuff
+    facebook: legobuff
+    instagram: jamiewallingford
+    linkedin: legobuff
+    microdotblog: j
+    rss: rss
+    twitter: legobuff
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+feed:
+  tags:
+    - misl
+    - micro
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

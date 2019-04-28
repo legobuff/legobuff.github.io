@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /misl/
+title: misl
+description: my geeky posts, projects, and findings... working to make is suck less
+---
+
+<h1 class="post-title">misl</h1>
+<p class="post-meta">{{ page.description }}</p>
+<table>    
+{%- assign sorted_tag_posts = site.tags['misl'] | where_exp: "post", "post.draft != true" | sort: 'date' | reverse -%}
+{%- for post in sorted_tag_posts -%}
+<tr>
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<td style="text-align: right; width: 100px;"><span class="post-meta">{{ post.date | date: date_format | downcase }}</span></td>
+<td><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></span></td>
+</tr>
+{%- endfor -%}
+</table>

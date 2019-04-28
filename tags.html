@@ -1,0 +1,32 @@
+---
+layout: page
+permalink: /tags/
+title: tags
+---
+
+<div id="archives">
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
+  <div class="archive-group">
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <div id="#{{ tag_name | slugize }}"></div>
+    <p></p>
+    
+    <a name="{{ tag_name | slugize }}"></a>
+    <h3 class="category-head">{{ tag_name }}</h3>
+    <table>
+    {% assign sorted_tag_posts = site.tags[tag_name] | where_exp: "post", "post.draft != true" | sort: 'date' | reverse %}
+    {% for post in sorted_tag_posts %}
+      <tr>
+    <!-- <article class="archive-item"> -->
+    <!-- <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4> -->
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <td style="text-align: right; width: 100px;"><span class="post-meta">{{ post.date | date: date_format | downcase }}</span></td>
+    <td><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></span></td>
+    <!-- </article> -->
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+{% endfor %}
+</div>
