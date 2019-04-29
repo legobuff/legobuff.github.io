@@ -2,6 +2,7 @@ title: legobuff
 author: jamie wallingford 
 email: jamie@legobuff.com
 description: a place for me to post about life, projects, and findings.
+google_analytics: UA-70529-1
 show_excerpts: true # set to true to show excerpts on the homepage
 
 minima:

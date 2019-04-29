@@ -3,10 +3,10 @@ layout: default
 ---
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <h1 class="page-heading">{{ page.title | downcase }}</h1>
   {%- endif -%}
 
-  {{ content }}
+  {{ content | downcase }}
 
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
@@ -21,7 +21,7 @@ layout: default
         {% assign tags = page.tags %}
       {% endif %}
       {% if tags.size > 0 %}
-      <span class="post-meta">•</span> {% for tag in tags %}<a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
+      <span class="post-meta">•</span> {% for tag in tags %}<a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{ tag | downcase }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
       {% endif %}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
