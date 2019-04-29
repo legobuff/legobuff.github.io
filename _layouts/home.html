@@ -29,7 +29,7 @@ layout: default
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          {{ post.excerpt | downcase }}
         {%- endif -%}
       </li>
       {%- endif -%}
