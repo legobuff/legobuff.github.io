@@ -6,7 +6,7 @@
 <link href="{{ site.url }}" rel="alternate" type="text/html"/>
 <updated>{{ site.time | date_to_xmlschema }}</updated>
 <id>{{ site.url }}/feeds/misl.xml</id>
-<title type="html">legobuff | Misl</title>
+<title type="html">legobuff | misl</title>
 <subtitle>my geeky posts, projects, and findings... working to make is suck less</subtitle>
 <author><name>{{ site.author }}</name></author>
 {%- assign sorted_tag_posts = site.tags['misl'] | where_exp: "post", "post.draft != true" | sort: 'date' | reverse -%}
@@ -20,7 +20,7 @@
 <content type="html" xml:base="{{ site.url }}{{ post.url }}">{{ post.content | downcase | xml_escape}}</content>
 <author><name>{{ site.author }}</name></author>
 <category term="misl"/>
-<summary type="html">{{ post.excerpt | downcase | xml_escape}}</summary>
+<summary type="html">{{ post.excerpt | xml_escape}}</summary>
 </entry>
 {%- endfor -%}
 
