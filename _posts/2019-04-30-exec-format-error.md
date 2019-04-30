@@ -1,7 +1,7 @@
 ---
 layout: post
 title: exec format error
-tags: misl docker dotnet-core aspnet raspbery-pi
+tags: misl docker dotnet-core aspnet raspberry-pi
 date: 2019-04-30 17:37:00
 ---
 
