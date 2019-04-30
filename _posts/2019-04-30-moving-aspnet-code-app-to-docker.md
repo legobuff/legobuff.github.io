@@ -57,4 +57,4 @@ docker run -it -p 5001:443 \
    legobuff/guidmaker
 ```
 
-and now `https://localhost:5001/api/guid` works. at this point i have a working base image. next i want to follow along with this [tutorial](https://blog.alexellis.io/microservice-swarm-mode/), but that will come in part 2. 
+and now `https://localhost:5001/api/guid` works. at this point i have a working image.
