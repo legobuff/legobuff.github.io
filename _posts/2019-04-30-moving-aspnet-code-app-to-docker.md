@@ -1,6 +1,6 @@
 ---
 layout: post
-title: moving a dotnet core aspnet app to docker (part 1)
+title: moving a dotnet core aspnet app to docker
 tags: misl docker dotnet-core aspnet
 ---
 as i learn docker, and with my professional life working primarily in the microsoft ecosystem, i have read many [blogs](https://blog.alexellis.io), [articles](https://www.hanselman.com/blog/GettingStartedWithNETCoreAndDockerAndTheMicrosoftContainerRegistry.aspx), and [tutorials](https://docs.docker.com/docker-for-mac/). these have been educational, yet I continue to run into issues and nuances as i work to move a dotnet core aspnet app into a container. i am documenting these here as i run into them.
