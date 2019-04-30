@@ -2,6 +2,7 @@
 layout: post
 title: moving a dotnet core aspnet app to docker
 tags: misl docker dotnet-core aspnet
+date: 2019-04-30 01:15:00
 ---
 as i learn docker, and with my professional life working primarily in the microsoft ecosystem, i have read many [blogs](https://blog.alexellis.io), [articles](https://www.hanselman.com/blog/GettingStartedWithNETCoreAndDockerAndTheMicrosoftContainerRegistry.aspx), and [tutorials](https://docs.docker.com/docker-for-mac/). these have been educational, yet I continue to run into issues and nuances as i work to move a dotnet core aspnet app into a container. i am documenting these here as i run into them.
 
@@ -57,4 +58,4 @@ docker run -it -p 5001:443 \
    legobuff/guidmaker
 ```
 
-and now `https://localhost:5001/api/guid` works. at this point i have a working image.
+and now `https://localhost:5001/api/guid` works. at this point i have a working image. [continued here]({% post_url 2019-04-30-exec-format-error %})
