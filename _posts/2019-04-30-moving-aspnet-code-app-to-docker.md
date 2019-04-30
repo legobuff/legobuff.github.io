@@ -48,7 +48,7 @@ docker run --name guidmaker --rm -it -p 5000:80 -p 5001:443 legobuff/guidmaker
 no dice. if i was thinking, i would have known that would not work as that it telling docker to map a local port to 443 and not configuring aspnet. i also did not pay close attention to the aspnet page above. after re-reading it, i noticed the "See [Hosting ASP.NET Core Images with Docker over HTTPS](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md) to use HTTPS with this image" line. that link explains how to run the container configured for https. after following the steps outlined, i am able to run via...
 
 ```
-docker run -it -p 4443:443 \
+docker run -it -p 5001:443 \
    -e ASPNETCORE_URLS="https://+443" \
    -e ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword" \
    -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/GuidMaker.pfx \
