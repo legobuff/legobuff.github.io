@@ -1,7 +1,7 @@
 ---
 layout: post
 title: changing it up
-tags: 
+tags: misc
 ---
 
 working to consolidate where and how i post on the internet for reasons that there is no need to get into. with that, looking to make this the canonical location.
