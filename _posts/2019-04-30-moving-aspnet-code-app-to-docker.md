@@ -11,7 +11,7 @@ as i learn docker, and with my professional life working primarily in the micros
 
 when creating a Dockerfile i was adding `EXPOSE` lines like [this](https://thomasbandt.com/running-aspnetcore-with-https-in-a-docker-container) indicated. doing this did not cause any errors, however, after reviewing the [dotnet-docker](https://github.com/dotnet/dotnet-docker) repo and the [ASP.NET Core Docker Sample](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp), i noticed the [sample](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) does not use `EXPOSE`, and so i removed these from the GuidMaker Dockerfile.
 
-after running docker build, i am now able to run guidmaker with a simple port map by:
+after running docker build, i am now able to run GuidMaker with a simple port map by:
 
 ```
 docker run --name guidmaker --rm -it -p 5001:443 legobuff/guidmaker
