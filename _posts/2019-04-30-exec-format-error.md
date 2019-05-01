@@ -97,4 +97,4 @@ ILLINK : warning : unresolved assembly System.Data.Odbc [/app/GuidMaker.csproj]
 The command '/bin/sh -c dotnet publish -c Release -r linux-arm -o out /p:ShowLinkerSizeComparison=true' returned a non-zero code: 1
 ```
 
-and bummer... so a bit of googling and it looks like it [not compatible with netcoreapp2.2](https://github.com/mono/linker/issues/405).
+and bummer... so a bit of googling and it looks like it is [not compatible with netcoreapp2.2](https://github.com/mono/linker/issues/405).
