@@ -5,6 +5,8 @@ description: a place for me to post about life, projects, and findings.
 google_analytics: UA-70529-1
 show_excerpts: true # set to true to show excerpts on the homepage
 #future: true
+disqus:
+  shortname: legobuff
 
 minima:
   date_format: "%b %-d, %Y"
@@ -26,7 +28,6 @@ minima:
 feed:
   tags:
     - misl
-    - micro
 
 # Build settings
 theme: minima
