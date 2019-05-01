@@ -97,4 +97,12 @@ ILLINK : warning : unresolved assembly System.Data.Odbc [/app/GuidMaker.csproj]
 The command '/bin/sh -c dotnet publish -c Release -r linux-arm -o out /p:ShowLinkerSizeComparison=true' returned a non-zero code: 1
 ```
 
-and bummer... so a bit of googling and it looks like it is [not compatible with netcoreapp2.2](https://github.com/mono/linker/issues/405).
+~~and bummer... so a bit of googling and it looks like it is [not compatible with netcoreapp2.2](https://github.com/mono/linker/issues/405).~~
+
+__updated @ 19:34:__ after googling around i stumbled upon this [post](https://www.hanselman.com/blog/ACompleteContainerizedNETCoreApplicationMicroserviceThatIsAsSmallAsPossible.aspx) from [Scott Hanselman](https://twitter.com/shanselman) where he had this nugget
+
+> "I did end up hitting [this bug](https://github.com/mono/linker/issues/314?WT.mc_id=-blog-scottha) in the Linker (it's not Released) but [there's an easy workaround](https://github.com/mono/linker/issues/314?WT.mc_id=-blog-scottha#issuecomment-417030818). I just need to set the property _CrossGenDuringPublish_ to false in the project file."
+
+after doing this, it works. now i need to do as Scott says...
+
+> "...iterate. Build, trim, test, add an assembly by reading the error message, and repeat."
