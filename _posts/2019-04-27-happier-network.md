@@ -13,4 +13,4 @@ being a heavy console gaming family, my boys did discover a few sites that neede
 
 after all that, on average I am seeing more than a __30%__ reduction in traffic. this is a __drastic__ improvement and my network is happier for it.
 
-![](/assets/post-images/pi-hole-snapshot.png)
+![]({{ "assets/post-images/pi-hole-snapshot.png" | absolute_url }})
