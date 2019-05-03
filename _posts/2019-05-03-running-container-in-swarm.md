@@ -39,7 +39,7 @@ docker service create --name guidmaker \
    --env ASPNETCORE_URLS="https://+443" \
    --env ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword" \
    --env ASPNETCORE_Kestrel__Certificates__Default__Path=/https/GuidMaker.pfx \
-   --mount type=bind,source=/Users/jamiewallingford/https,destination=/https \
+   --mount type=bind,source=${HOME}/https,destination=/https \
    legobuff/guidmaker:arm32
 
 Error response from daemon: rpc error: code = InvalidArgument desc = port '5001' is already in use by service 'guidmaker' (d0oudeiu51kuj26cemtcesflk) as an ingress port
