@@ -4,14 +4,14 @@ title: running a container in swarm
 tags: misl docker dotnet-core raspberry-pi
 ---
 
-now that i have a slimmed down from the previous [post]({% post_url 2019-04-30-exec-format-error %}) lets get it up in running as a service. now not reading before trying, i took the working `docker run` example from earlier post and jumped straight in with...
+now that i have a slimmed down image from the previous [post]({% post_url 2019-04-30-exec-format-error %}) lets get it up and running as a service. i did not do any reading before trying this so i took the working `docker run` example from earlier post and jumped straight in with...
 
 ```
 docker service create -p 5001:443 \
    -e ASPNETCORE_URLS="https://+443" \
    -e ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword" \
    -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/GuidMaker.pfx \
-   -v ${HOME}/https:/https/ \
+   -v ${HOME}/https:/https \
    --name guidmaker \
    legobuff/guidmaker:arm32
 ```
@@ -49,7 +49,7 @@ oops, i forgot to remove the service before creating it again...  `docker servic
 
 ```
 ID                  NAME                MODE                REPLICAS            IMAGE                       PORTS
-3y16p9y4oppe        guidmaker           replicated          1/1                 legobuff/guidmaker:arm32   *:5001->443/tcp
+3y16p9y4oppe        guidmaker           replicated          1/1                 legobuff/guidmaker:arm32    *:5001->443/tcp
 ```
 
 lets see if it scales...
@@ -72,7 +72,7 @@ and...
 ```
 docker service ls
 ID                  NAME                MODE                REPLICAS            IMAGE                       PORTS
-3y16p9y4oppe        guidmaker           replicated          6/6                 legobuff/guidmaker:arm32   *:5001->443/tcp
+3y16p9y4oppe        guidmaker           replicated          6/6                 legobuff/guidmaker:arm32    *:5001->443/tcp
 
 ...
 
