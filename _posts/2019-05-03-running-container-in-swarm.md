@@ -1,7 +1,7 @@
 ---
 layout: post
 title: running a container in swarm
-tags: misl docker dotnet-core raspberry-pi
+tags: misl docker
 ---
 
 now that i have a slimmed down image from the previous [post]({% post_url 2019-04-30-exec-format-error %}) lets get it up and running as a service. i did not do any reading before trying this so i took the working `docker run` example from earlier post and jumped straight in with...
